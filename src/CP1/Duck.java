@@ -10,6 +10,10 @@ public abstract class Duck {
 		
 	}
 	
+	public void fly() {
+		
+	}
+	
 	public abstract void display();	
 
 }
