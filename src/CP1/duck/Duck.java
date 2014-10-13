@@ -5,8 +5,8 @@ import CP1.QuackBehavior;
 
 public abstract class Duck {
 
-	QuackBehavior quackBehavior;
-	FlyBehavior flyBehavior;
+	private QuackBehavior quackBehavior;
+	private FlyBehavior flyBehavior;
 
 	public void swim() {
 
@@ -21,5 +21,13 @@ public abstract class Duck {
 	}
 
 	public abstract void display();
+
+	public void setQuackBehavior(QuackBehavior quackBehavior) {
+		this.quackBehavior = quackBehavior;
+	}
+
+	public void setFlyBehavior(FlyBehavior flyBehavior) {
+		this.flyBehavior = flyBehavior;
+	}
 
 }
