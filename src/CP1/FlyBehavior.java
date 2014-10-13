@@ -1,5 +1,5 @@
 package CP1;
 
-public interface Flyable {
+public interface FlyBehavior {
 	void fly();
 }

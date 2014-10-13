@@ -1,5 +1,5 @@
 package CP1;
 
-public interface Quackable {
+public interface QuackBehavior {
 	void quack();
 }

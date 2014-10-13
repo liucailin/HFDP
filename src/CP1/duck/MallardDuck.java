@@ -1,26 +1,11 @@
 package CP1.duck;
 
-import CP1.Flyable;
-import CP1.Quackable;
-
-public class MallardDuck extends Duck implements  Flyable, Quackable{
+public class MallardDuck extends Duck {
 
 	@Override
 	public void display() {
 		System.out.println("i am a mallard duck");
 
-	}
-
-	@Override
-	public void fly() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void quack() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
