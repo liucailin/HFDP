@@ -1,0 +1,14 @@
+cp1 is a simuduck app.
+
+The one constant in software development.  CHANGE.
+
+Q: Things Drive change
+
+1. ADD DELECT MODIFY functionality
+2. Change DataBase
+
+Design Principle
+
+Identify the aspect of your application that vary and separate them from what stays the same.
+Take the parts that vary and encapsulate them, so that later you can alter or extend the parts that without affecting those that don't.
+ALL patterns provide a way to let SOME PART OF A SYSTEM VARY INDEPENDENTLY OF ALL OTHER PARTS.
