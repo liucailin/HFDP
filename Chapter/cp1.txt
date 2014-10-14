@@ -7,8 +7,23 @@ Q: Things Drive change
 1. ADD DELECT MODIFY functionality
 2. Change DataBase
 
-Design Principle
+OO Basic
+1.Abstraction 2.Encapsulation 3.Polymorphism 4.Inheritance
+
+OO Design Principle
+
+1.Encapsulate what varies
 
 Identify the aspect of your application that vary and separate them from what stays the same.
 Take the parts that vary and encapsulate them, so that later you can alter or extend the parts that without affecting those that don't.
 ALL patterns provide a way to let SOME PART OF A SYSTEM VARY INDEPENDENTLY OF ALL OTHER PARTS.
+
+
+2.Favor composition than inheritance
+
+
+3.Program to interfaces no implementations
+
+
+OO Design Patterns
+Strategy - defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
