@@ -1,35 +1,15 @@
 package CP2;
 
-import java.util.ArrayList;
+import java.util.Observable;
 
-public class WeatherData implements Subject {
+public class WeatherData extends Observable {
 
-	private ArrayList<Observer> observers = new ArrayList<Observer>();
 	private float temperature;
 	private float humidity;
 	private float pressure;
 
-	@Override
-	public void registerObserver(Observer o) {
-		observers.add(o);
-
-	}
-
-	@Override
-	public void removeObserver(Observer o) {
-		observers.remove(o);
-
-	}
-
-	@Override
-	public void notifyObservers() {
-		for (int i = 0; i < observers.size(); i++) {
-			observers.get(i).update(temperature, humidity, pressure);
-		}
-
-	}
-
 	public void measurementsChanged() {
+		setChanged();
 		notifyObservers();
 	}
 
@@ -42,4 +22,15 @@ public class WeatherData implements Subject {
 		measurementsChanged();
 	}
 
+	public float getTemperature() {
+		return temperature;
+	}
+
+	public float getHumidity() {
+		return humidity;
+	}
+
+	public float getPressure() {
+		return pressure;
+	}
 }

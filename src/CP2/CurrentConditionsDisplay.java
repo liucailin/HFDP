@@ -1,14 +1,17 @@
 package CP2;
 
-public class CurrentConditionsDisplay implements Observer, DisplayElement {
+import java.util.Observable;
 
-	private Subject weatherDate;
+public class CurrentConditionsDisplay implements java.util.Observer,
+		DisplayElement {
+
+	private Observable weatherDate;
 	private float temp;
 	private Object humidity;
 
-	public CurrentConditionsDisplay(Subject weatherData) {
+	public CurrentConditionsDisplay(Observable weatherData) {
 		this.weatherDate = weatherData;
-		this.weatherDate.registerObserver(this);
+		this.weatherDate.addObserver(this);
 	}
 
 	@Override
@@ -18,9 +21,11 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
 	}
 
 	@Override
-	public void update(float temp, float humidity, float pressure) {
-		this.temp = temp;
-		this.humidity = humidity;
-		Display();
+	public void update(Observable obs, Object data) {
+		if (obs instanceof WeatherData) {
+			temp = ((WeatherData) obs).getTemperature();
+			humidity = ((WeatherData) obs).getHumidity();
+			Display();
+		}
 	}
 }
