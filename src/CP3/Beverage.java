@@ -2,11 +2,11 @@ package CP3;
 
 public abstract class Beverage {
 	
-	String description;
+	String description;	
 	
 	public abstract double cost();
 	
-	private String getDescription() {
+	public String getDescription() {
 		return description;
 	}
 

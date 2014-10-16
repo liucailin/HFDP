@@ -1,0 +1,6 @@
+cp3 is a beverage order system.
+
+Design principle:
+
+Open-Closed 
+Classed should open for extension, but closed for modification.
