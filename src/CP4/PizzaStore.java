@@ -1,20 +1,17 @@
 package CP4;
 
-public class PizzaStore {
-
-	SimplePizzaFactory pizzaFactory;
-
-	public PizzaStore(SimplePizzaFactory pizzaFactory) {
-		this.pizzaFactory = pizzaFactory;
-	}
+public abstract class PizzaStore {
 
 	public void orderPizza(String type) {
-		Pizza pizza = pizzaFactory.createPizza(type);
+
+		Pizza pizza = createPazza(type);
 
 		pizza.prepare();
 		pizza.bake();
 		pizza.cut();
 		pizza.box();
 	}
+
+	abstract Pizza createPazza(String type);
 
 }

@@ -1,0 +1,9 @@
+chapter 4 is about Factory.
+
+Factory method:
+
+abstract product factoryMethod(...);
+
+Factory method pattern defined an interface for creating an object, but let subclass decide which class to instantiate.
+Factory method lets a class defer instantiation to subclass. Contain creator classes and product classes.
+
