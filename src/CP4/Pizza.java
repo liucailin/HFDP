@@ -1,21 +1,30 @@
 package CP4;
 
 public abstract class Pizza {
-	
-	public void prepare() {
-	
+
+	String name;
+	Dough dough;
+	Sauce sauce;
+	Veggies veggies[];
+	Cheese cheese;
+	Clams clam;
+
+	abstract void prepare();
+
+	void bake() {
+
 	}
-	
-	public void bake() {
-		
+
+	void cut() {
+
 	}
-	
-	public void cut() {
-		
+
+	void box() {
+
 	}
-	
-	public void box() {
-		
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }

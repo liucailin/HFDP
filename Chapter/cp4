@@ -7,3 +7,21 @@ abstract product factoryMethod(...);
 Factory method pattern defined an interface for creating an object, but let subclass decide which class to instantiate.
 Factory method lets a class defer instantiation to subclass. Contain creator classes and product classes.
 
+Design Principle
+Dependency Inversion
+
+Depend upon abstraction. Do not depend upon concrete classes. Our high-level components should not depend on our low-level components; rather, they should both depend on abstractions.
+A "high-level" component is a class with behavior defined in terms of other, "low-level" components.
+
+guidelines to follow the DI
+
+No variable should hold a reference to a concrete class.(We can use factory)
+
+No class should derive from a concrete class.(derive a concrete class mean to depending on a concrete class)
+
+No method should override an implementation method of any of its base classes.(If you override an implemented method, 
+then, our base class wasn¡¯t really an abstraction to start with. Those methods implemented in the base class are meant to be shared by all your subclasses.)
+
+A class you write is likely change.
+
+Abstract Factory Pattern provides an interface for creating families of related dependent objects without specifying their concrete classes.
