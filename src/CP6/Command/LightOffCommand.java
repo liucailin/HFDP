@@ -2,18 +2,17 @@ package CP6.Command;
 
 import CP6.Device.Light;
 
-public class LightCommand implements Command {
+public class LightOffCommand implements Command {
 
 	Light light;
 
-	public LightCommand(Light light) {
+	public LightOffCommand(Light light) {
 		this.light = light;
 	}
 
 	@Override
 	public void excute() {
-		light.on();
+		light.off();
 
 	}
-
 }
