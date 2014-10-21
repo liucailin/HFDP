@@ -3,6 +3,7 @@ package CP6.Command;
 public class RemoteControl {
 	Command[] onCommands;
 	Command[] offCommands;
+	Command undoCommand;
 
 	public RemoteControl() {
 		onCommands = new Command[7];
@@ -12,14 +13,22 @@ public class RemoteControl {
 	public void setCommand(int slot, Command onCommand, Command offCommand) {
 		onCommands[slot] = onCommand;
 		offCommands[slot] = offCommand;
+
+		for (int i = 0; i < 7; i++) {
+			onCommands[i] = new NoCommand();
+			offCommands[i] = new NoCommand();
+		}
+		undoCommand = new NoCommand();
 	}
 
 	public void onButtonWasPushed(int slot) {
 		onCommands[slot].excute();
+		undoCommand = onCommands[slot];
 	}
 
 	public void offButtonWasPushed(int slot) {
 		offCommands[slot].excute();
+		undoCommand = offCommands[slot];
 	}
 
 	public String toString() {

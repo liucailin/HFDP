@@ -16,4 +16,9 @@ public class CarageDoorCommand implements Command {
 		carageDoor.lightOn();
 	}
 
+	@Override
+	public void undo() {
+
+	}
+
 }
