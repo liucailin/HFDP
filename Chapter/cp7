@@ -2,3 +2,17 @@ The Adapter Pattern converts the interface of a class into another interface the
 the use of object composition to wrap the adaptee with altered interface. This approach has the added advantage that we can use an adapter class with any subclass of the adaptee.
 
 the pattern binds the client to an interface, not an implementation; we could use several adapters, each converting a different backend set of classes. Or, we could add new implementation after the fact, as long as they adhere to the Target interface.
+
+The Facade Pattern provides a unified interface to a set of interfaces in a subsystems. Facade defines a hige-level interface that makes the subsystem easier to use.
+
+Design Principle 
+Principle of Least Knowledge - talk only to your immediate friends.
+Guidelines: take any object; now from any method in that object, we should only invoke methods that bleong to:
+The Object itself
+Objects passed in as a parameter to the method
+Any object the method create or instantiates
+Any component (HAS-A) of the object.
+
+Disadvantage
+1) reduces the dependencies but also reduce software maintenance.
+2) results in more "wrapper" classes being writing to handle method calls to other components.
