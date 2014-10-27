@@ -1,6 +1,6 @@
 package CP9;
 
-public class DinnerMenu {
+public class DinnerMenu implements Menu {
 
 	static final int MAX_ITEMS = 6;
 	int numberOfItem;
@@ -27,7 +27,7 @@ public class DinnerMenu {
 		numberOfItem++;
 	}
 
-	public Iterator crateIterator() {
+	public Iterator createIterator() {
 		return dinnerMenuIterator;
 	}
 

@@ -2,21 +2,21 @@ package CP9;
 
 public class Waitress {
 
-	DinnerMenu dinnerMenu;
-	PancakeHouseMenu houseMenu;
+	Menu dinnerMenu;
+	Menu houseMenu;
 
 	/**
 	 * @param houseMenu
 	 * @param dinnerMenu
 	 */
-	public Waitress(PancakeHouseMenu houseMenu, DinnerMenu dinnerMenu) {
+	public Waitress(Menu houseMenu, Menu dinnerMenu) {
 		this.houseMenu = houseMenu;
 		this.dinnerMenu = dinnerMenu;
 	}
 
 	public void printMenu() {
 		printMenu(houseMenu.createIterator());
-		printMenu(dinnerMenu.crateIterator());
+		printMenu(dinnerMenu.createIterator());
 	}
 
 	private void printMenu(Iterator iterator) {
