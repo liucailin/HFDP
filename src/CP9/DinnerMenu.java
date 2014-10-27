@@ -1,11 +1,11 @@
 package CP9;
 
-
 public class DinnerMenu {
 
 	static final int MAX_ITEMS = 6;
 	int numberOfItem;
 	MenuItem[] menuItems;
+	DinnerMenuIterator dinnerMenuIterator;
 
 	public DinnerMenu() {
 		menuItems = new MenuItem[MAX_ITEMS];
@@ -14,6 +14,8 @@ public class DinnerMenu {
 				"Pancakes with scrambled eggs, and toast", true, 2.99);
 		addItem("Regular Pancake Breakfast",
 				"Pancakes with fried eggs, sausage", false, 2.99);
+
+		dinnerMenuIterator = new DinnerMenuIterator(menuItems);
 	}
 
 	public void addItem(String name, String descr, boolean vegetarian,
@@ -25,8 +27,8 @@ public class DinnerMenu {
 		numberOfItem++;
 	}
 
-	public MenuItem[] getMenuItems() {
-		return menuItems;
+	public Iterator crateIterator() {
+		return dinnerMenuIterator;
 	}
 
 }

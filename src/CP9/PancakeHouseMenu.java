@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class PancakeHouseMenu {
 
 	ArrayList menuItems;
+	PancakeHouseMenuIterator houseMenuIterator;
 
 	public PancakeHouseMenu() {
 		menuItems = new ArrayList();
@@ -13,6 +14,8 @@ public class PancakeHouseMenu {
 				"Pancakes with scrambled eggs, and toast", true, 2.99);
 		addItem("Regular Pancake Breakfast",
 				"Pancakes with fried eggs, sausage", false, 2.99);
+
+		houseMenuIterator = new PancakeHouseMenuIterator(menuItems);
 	}
 
 	public void addItem(String name, String descr, boolean vegetarian,
@@ -21,8 +24,8 @@ public class PancakeHouseMenu {
 		menuItems.add(menuItem);
 	}
 
-	public ArrayList getMenuItems() {
-		return menuItems;
+	public Iterator createIterator() {
+		return houseMenuIterator;
 	}
 
 }
