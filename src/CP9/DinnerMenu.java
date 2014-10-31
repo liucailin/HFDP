@@ -1,6 +1,6 @@
 package CP9;
 
-public class DinnerMenu implements Menu {
+public class DinnerMenu implements OldMenuInteface {
 
 	static final int MAX_ITEMS = 6;
 	int numberOfItem;

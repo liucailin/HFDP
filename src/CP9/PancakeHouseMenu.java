@@ -2,7 +2,7 @@ package CP9;
 
 import java.util.ArrayList;
 
-public class PancakeHouseMenu implements Menu {
+public class PancakeHouseMenu implements OldMenuInteface {
 
 	ArrayList menuItems;
 	PancakeHouseMenuIterator houseMenuIterator;
