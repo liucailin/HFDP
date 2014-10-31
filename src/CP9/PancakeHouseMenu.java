@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class PancakeHouseMenu implements OldMenuInteface {
 
-	ArrayList menuItems;
+	ArrayList<MenuItem> menuItems;
 	PancakeHouseMenuIterator houseMenuIterator;
 
 	public PancakeHouseMenu() {
-		menuItems = new ArrayList();
+		menuItems = new ArrayList<MenuItem>();
 
 		addItem("K&B¡¯s Pancake Breakfast",
 				"Pancakes with scrambled eggs, and toast", true, 2.99);

@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class PancakeHouseMenuIterator implements Iterator {
 
-	ArrayList menuItems;
+	ArrayList<?> menuItems;
 	int menuPos;
 	MenuItem currentItem;
 
 	/**
 	 * @param menuItems
 	 */
-	public PancakeHouseMenuIterator(ArrayList menuItems) {
+	public PancakeHouseMenuIterator(ArrayList<?> menuItems) {
 		this.menuItems = menuItems;
 	}
 
