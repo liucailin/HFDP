@@ -40,6 +40,7 @@ public class MenuTestDirver {
 		// add more menu items here
 		Waitress waitress = new Waitress(allMenus);
 		waitress.printMenu();
+		waitress.printVegMenu();
 	}
 
 }

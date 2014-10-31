@@ -1,12 +1,14 @@
 package CP9;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Menu extends MenuComponent {
 
 	ArrayList<MenuComponent> componentList = new ArrayList<MenuComponent>();
 	String name;
 	String description;
+	Iterator<MenuComponent> iterator;
 
 	/**
 	 * @param name
@@ -47,6 +49,14 @@ public class Menu extends MenuComponent {
 			iterator.next().print();
 		}
 
+	}
+
+	@Override
+	public Iterator<MenuComponent> createIterator() {
+		if (iterator == null) {
+			iterator = new CompositeIterator(componentList.iterator());
+		}
+		return iterator;
 	};
 
 }

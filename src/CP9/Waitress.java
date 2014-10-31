@@ -1,5 +1,7 @@
 package CP9;
 
+import java.util.Iterator;
+
 public class Waitress {
 
 	/*
@@ -30,4 +32,18 @@ public class Waitress {
 		menuComponent.print();
 	}
 
+	public void printVegMenu() {
+		System.out.println("\nVEGETARIAN MENU\n----");
+		Iterator<MenuComponent> iterator = menuComponent.createIterator();
+		while (iterator.hasNext()) {
+			MenuComponent menuComponent = iterator.next();
+			try {
+				if (menuComponent.isVegetarian()) {
+					menuComponent.print();
+				}
+			} catch (UnsupportedOperationException e) {
+			}
+
+		}
+	}
 }

@@ -1,5 +1,7 @@
 package CP9;
 
+import java.util.Iterator;
+
 public class MenuItem extends MenuComponent {
 
 	String name;
@@ -40,6 +42,11 @@ public class MenuItem extends MenuComponent {
 		}
 		System.out.println(", " + getPrice());
 		System.out.println(" -- " + getDescription());
+	}
+
+	@Override
+	public Iterator<MenuComponent> createIterator() {
+		return new NullIterator();
 	}
 
 }
