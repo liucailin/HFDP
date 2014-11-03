@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class CompositeIterator implements Iterator<MenuComponent> {
 
-	Stack<Iterator<MenuComponent>> stack = new Stack<>();
+	Stack<Iterator<MenuComponent>> stack = new Stack<Iterator<MenuComponent>>();
 
 	public CompositeIterator(Iterator<MenuComponent> iterator) {
 		stack.push(iterator);
